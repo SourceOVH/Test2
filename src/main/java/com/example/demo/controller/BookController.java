@@ -31,7 +31,7 @@ public class BookController {
     public ResponseEntity <BookResponse> registration(@Valid @RequestBody BookEntity data) {
         try {
             service.save(data);
-            String message = "Вы добавили книгу!" + '\n' + "Информация о добавленой книге:" + "Название: " + data.getTitle() + "Автор: " + data.getAuthor() + ", Год выпуска: " + data.getYear() + "Издатель: " + data.getPublisher() + "Жанр: "+ data.getKind();
+            String message = "Вы добавили книгу!" + '\n' + "Информацвввфыввия о добавленой книге:" + "Название: " + data.getTitle() + "Автор: " + data.getAuthor() + ", Год выпуска: " + data.getYear() + "Издатель: " + data.getPublisher() + "Жанр: "+ data.getKind();
             return ResponseEntity.ok(new BookResponse(true, message, data));
 
         } catch (Exception e) {
